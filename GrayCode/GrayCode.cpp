@@ -7,7 +7,7 @@ using namespace::std;
 
 int main() {
    
-   const int N = 18;
+   const int N = 28;
    long int num = pow(2, N);
    int gray;
    ofstream myfile;
@@ -16,8 +16,8 @@ int main() {
    myfile.open(filename);
 
 
-   for (int i = 0; i < num; i++) {
-      cout << i << endl;
+   for (long int i = 0; i < num; i++) {
+      cout << (int)log2(i) << endl;
       gray = i ^ (i / 2);
       bitset<N> bit(gray);
       myfile << bit << endl;
